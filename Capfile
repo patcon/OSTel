@@ -1,9 +1,14 @@
-This will be a capfile for automating deployment
+# Load DSL and Setup Up Stages
+require 'capistrano/setup'
 
-THE STEPS
-pull master branch
-copy only changed files
-run database migrations
-update configuration data
-reseed secret token (resets all session data)
-hup unicorn
+# Includes default deployment tasks
+require 'capistrano/deploy'
+
+# Includes tasks from other gems included in your Gemfile
+require 'capistrano/rbenv'
+require 'capistrano/bundler'
+require 'capistrano/rails/collection'
+require 'capistrano/rails/migrations'
+
+# Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
