@@ -1,7 +1,4 @@
 *.swp
-log/*.log
-config/database.yml
-db/*.sqlite3
-/*.pid
 .DS_Store
-tmp/*
+
+config/database.yml
