@@ -7,3 +7,12 @@ _This application does not provide the complete stack to build your own secure S
 This is a [Rails web application](https://dev.guardianproject.info/projects/ostel/wiki/Ruby_on_Rails) which manages a database shared with the [Kamailio SIP server](https://dev.guardianproject.info/projects/ostel/wiki/Kamailio).
 
 One of the core features of ostel is [secure federation](https://dev.guardianproject.info/projects/ostel/wiki/Inter-domain_calling) between SIP domains. This means that user@example1.com can place calls to user@example2.com without the need to create accounts on both systems. You can compare this type of network to Jabber/XMPP, Diaspora and of course the venerable messaging system we all know and love, email.
+
+## Capistrano Usage
+
+```
+cap staging deploy:check
+cap staging git:create_release
+cap staging bundler:install
+cap staging rails:rake:db:setup
+```

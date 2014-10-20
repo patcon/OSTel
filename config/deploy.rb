@@ -4,7 +4,8 @@ lock '3.2.1'
 app = 'ostn'
 
 set :application, app
-set :repo_url, 'https://github.com/guardianproject/OSTel.git'
+set :repo_url, 'https://github.com/patcon/OSTel.git'
+#set :branch, 'capistrano-deploy'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
