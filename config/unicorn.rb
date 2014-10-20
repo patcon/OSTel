@@ -11,8 +11,8 @@ working_directory APP_DIR
 
 # This is where we specify the socket.
 # We will point the upstream Nginx module to this socket later on
-#listen "#{APP_DIR}/tmp/sockets/unicorn.sock", :backlog => 64
-listen 3000
+#listen "#{SHARED_PATH}/tmp/sockets/unicorn.sock", :backlog => 64
+listen "127.0.0.1:3000"
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
