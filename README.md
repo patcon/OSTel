@@ -10,6 +10,8 @@ One of the core features of ostel is [secure federation](https://dev.guardianpro
 
 ## Capistrano Usage
 
+For a cold deploy (ie. no previous database):
+
 ```
 cap staging deploy:check
 cap staging git:create_release
