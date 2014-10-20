@@ -13,8 +13,12 @@ One of the core features of ostel is [secure federation](https://dev.guardianpro
 For a cold deploy (ie. no previous database):
 
 ```
+# Cold deploy commands
 cap staging deploy:check
 cap staging git:create_release
 cap staging bundler:install
-cap staging rails:rake:db:setup
+cap staging rails:rake:db:reset
+
+# Standard deploy command
+cap staging deploy
 ```
