@@ -45,11 +45,15 @@ namespace :deploy do
 
   desc 'Restart application'
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+    on roles(:web), in: :sequence, wait: 5 do
       execute :sudo, :service, :nginx, :reload
-      execute :sudo, :service, :unicorn_ostn, :restart
+    end
+
+    on roles(:app), in: :sequence, wait: 5 do
+      # ?? :upgrade vs :restart ??
+      # :upgrade needed when unicorn.rb changed
+      # :restart has no downtime, since master process lives
+      execute :sudo, :service, :unicorn_ostn, :upgrade
     end
   end
 
