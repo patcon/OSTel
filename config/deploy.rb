@@ -5,7 +5,7 @@ app = 'ostn'
 
 set :application, app
 set :repo_url, 'https://github.com/patcon/OSTel.git'
-#set :branch, 'capistrano-deploy'
+set :branch, 'capistrano-deploy'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
