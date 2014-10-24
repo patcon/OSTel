@@ -45,11 +45,11 @@ namespace :deploy do
 
   desc 'Restart application'
   task :restart do
-    on roles(:web), in: :sequence, wait: 5 do
+    on roles(:web), in: :sequence, wait: 3 do
       execute :sudo, :service, :nginx, :reload
     end
 
-    on roles(:app), in: :sequence, wait: 5 do
+    on roles(:app), in: :sequence, wait: 3 do
       # ?? :upgrade vs :restart ??
       # :upgrade needed when unicorn.rb changed
       # :restart has no downtime, since master process lives
