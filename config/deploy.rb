@@ -54,6 +54,7 @@ namespace :deploy do
       # :upgrade needed when unicorn.rb changed
       # :restart has no downtime, since master process lives
       execute :sudo, :service, :unicorn_ostn, :upgrade
+      execute :sudo, :service, :kamailio, :restart
     end
   end
 
