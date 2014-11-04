@@ -11,7 +11,7 @@ group :development do
   gem 'sqlite3', :require => 'sqlite3'
 end
 
-group :staging, :production do
+group :demo, :production do
   gem 'pg'
   gem 'unicorn'
 end
