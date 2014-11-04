@@ -18,9 +18,9 @@ test:
 staging:
   adapter: postgresql
   encoding: unicode
-  database: ostn_staging
-  username: webapp
-  password: testing123
+  database: <%= ENV['OSTN_DB_NAME'] %>
+  username: <%= ENV['OSTN_DB_USER'] %>
+  password: <%= ENV['OSTN_DB_PASS'] %>
   pool: 5
   timeout: 5000
 
