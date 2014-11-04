@@ -14,5 +14,5 @@ For a standard deploy:
 
 ```
 bundle install
-[bundle exec] cap staging deploy
+[bundle exec] cap demo deploy
 ```
