@@ -1,9 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-app = 'ostn'
-
-set :application, app
+set :application, 'ostn'
 set :repo_url, 'https://github.com/patcon/OSTel.git'
 set :branch, 'capistrano-deploy'
 
@@ -11,7 +9,7 @@ set :branch, 'capistrano-deploy'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/home/deploy/#{app}"
+# set :deploy_to, "/var/www/my_app"
 
 # Default value for :scm is :git
 # set :scm, :git
