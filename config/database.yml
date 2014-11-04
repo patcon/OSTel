@@ -19,7 +19,7 @@ staging:
   adapter: postgresql
   encoding: unicode
   database: ostn_staging
-  username: deploy
+  username: webapp
   password: testing123
   pool: 5
   timeout: 5000
